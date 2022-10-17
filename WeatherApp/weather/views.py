@@ -4,7 +4,7 @@ from .models import City
 from .forms import CityForm
 
 def index(request):
-    appid = 'efd649f99da217efad920da0de7069a6'
+    appid = 'key'
     url = "https://api.openweathermap.org/data/2.5/weather?q={}&units=metric&appid=" + appid
 
     if(request.method == 'POST'):
@@ -29,7 +29,7 @@ def index(request):
     return render(request, 'index.html', context)
 
 def smtg(request):
-    appid = 'efd649f99da217efad920da0de7069a6'
+    appid = 'key'
     url = "https://api.openweathermap.org/data/2.5/weather?q={}&units=metric&appid=" + appid
     city = 'Minsk'
     res = requests.get(url.format(city)).json()
